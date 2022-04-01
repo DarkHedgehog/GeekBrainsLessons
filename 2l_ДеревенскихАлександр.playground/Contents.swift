@@ -60,9 +60,10 @@ while index > 0 {
 var ladderForIn = makeLadderArray(100)
 
 for item in ladderForIn where isNumberEven(item) || !isNumberMulti3(item) {
-    ladderForIn.removeFirst(item)
+//    ladderForIn.removeFirst(item)
 }
 print (ladderIndexed)
 print (ladderForIn)
+
 
 
