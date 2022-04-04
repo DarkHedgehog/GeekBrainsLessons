@@ -1,6 +1,6 @@
 import Cocoa
 
-
+// MARK: - Задание
 //1. Описать несколько структур – любой легковой автомобиль SportCar и любой грузовик TrunkCar.
 //
 //2. Структуры должны содержать марку авто, год выпуска, объем багажника/кузова, запущен ли двигатель, открыты ли окна, заполненный объем багажника.
@@ -30,6 +30,8 @@ enum CarAction {
     case openForLoad
     case closeForLoad
 }
+
+// MARK: - Sportcar
 
 /// Жаль что нет наследования
 struct SportCar {
@@ -142,6 +144,8 @@ struct SportCar {
         }
     }
 }
+
+// MARK: - TrunkCar
 
 /// Отличия от SportCar - loadState указывает, открыт ли грузовик для погрузки.
 /// В закрытый грузовик добавить груз не получится
@@ -268,6 +272,8 @@ struct TrunkCar {
         }
     }
 }
+
+// MARK: - Игры с машинками
 
 var sportCar = SportCar(mark: "Lada", year: 1999, maxVolume: 700);
 var trunkCar = TrunkCar(mark: "ЗИЛ", year: 1999, maxVolume: 3000);
