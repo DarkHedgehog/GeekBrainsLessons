@@ -271,7 +271,7 @@ extension TrunkCar: CustomStringConvertible {
         return fullname +
         ", Двигатель - " + (isEngineStarted ? "заведен" : "заглушен") +
         ", Окна - " + (isWindowClosed ? "открыты" : "закрыты") +
-        ", Груз - " + cargoVolume +
+        ", Груз - \(cargoVolume)" +
         ", Грузовой отсек - " + (isCargoBayOpened ? "открыт" : "закрыт")
     }
 }
