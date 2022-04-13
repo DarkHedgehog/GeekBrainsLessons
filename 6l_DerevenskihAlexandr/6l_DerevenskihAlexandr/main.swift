@@ -7,10 +7,12 @@
 
 import Foundation
 
+// MARK: - Задание
 //    1. Реализовать свой тип коллекции «очередь» (queue) c использованием дженериков.
 //    2. Добавить ему несколько методов высшего порядка, полезных для этой коллекции (пример: filter для массивов)
 //    3. * Добавить свой subscript, который будет возвращать nil в случае обращения к несуществующему индексу.
 
+// MARK: - Queue
 /// Очередь
 struct Queue<T> {
     typealias QueuePushSubscriber = (T) -> Void
@@ -20,6 +22,7 @@ struct Queue<T> {
     /// Хранилище для замыкания, вызывается при добавлении значения в очередь
     private var pushSubscriber: QueuePushSubscriber?
 
+    // MARK: - Queue.functions
     /// Поместить объект в очередь
     mutating func push(_ element: T) {
         items.append(element)
@@ -52,11 +55,13 @@ struct Queue<T> {
         return result
     }
 
+    // MARK: - Queue.subscribers
     /// Добавляет прослушивателя события добавления элемента в Queue
     mutating func setPush(subscriber closure: @escaping QueuePushSubscriber) {
         pushSubscriber = closure
     }
 
+    // MARK: - Queue.subscript
     /// Возвращает элемент  где index == 0 - первый в очереди
     subscript (index: Int) -> T? {
         guard index >= 0 && index < items.count else {
@@ -66,7 +71,7 @@ struct Queue<T> {
     }
 }
 
-
+// MARK: - Игры с Queue
 var queue = Queue<Int>()
 
 queue.push(12)
@@ -111,4 +116,3 @@ queue.push(67)
 queue.push(78)
 queue.push(89)
 queue.push(99)
-
