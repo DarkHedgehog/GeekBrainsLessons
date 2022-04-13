@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:6l_DerevenskihAlexandr/6l_DerevenskihAlexandr.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:macosPlayground.playground">
    </FileRef>
    <FileRef
