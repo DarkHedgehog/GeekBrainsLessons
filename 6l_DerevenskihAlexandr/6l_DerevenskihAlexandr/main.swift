@@ -64,9 +64,7 @@ struct Queue<T> {
     // MARK: - Queue.subscript
     /// Возвращает элемент  где index == 0 - первый в очереди
     subscript (index: Int) -> T? {
-        guard index >= 0 && index < items.count else {
-            return nil
-        }
+        guard index >= 0 && index < items.count else { return nil }
         return items[index]
     }
 }
