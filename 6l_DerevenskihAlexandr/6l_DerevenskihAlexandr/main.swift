@@ -103,6 +103,7 @@ queue.push(34)
 queue.push(45)
 queue.push(56)
 queue.push(67)
+
 print(queue[0] ?? "nil")
 print(queue[1] ?? "nil")
 print(queue[2] ?? "nil")
