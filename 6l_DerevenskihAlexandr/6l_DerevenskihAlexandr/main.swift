@@ -41,7 +41,7 @@ struct Queue<T> {
     }
 
     /// Поочередно изымает объекты из очереди и передает в closure,
-    /// пока очерередь не опустеет, либо closure не вернет true
+    /// пока очерередь не опустеет, либо closure не вернет false
     mutating func dequeue(while continueToDequeue: (T) -> Bool) -> [T] {
         guard !items.isEmpty else { return [] }
 
